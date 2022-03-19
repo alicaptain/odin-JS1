@@ -1,12 +1,10 @@
 "use strict";
 
-console.log("Hey Mate! This is the 1st time by yourself! (:");
+const button = document.querySelector("button");
 
-let love = function () {
-  let user = "Aysima";
-  let age = 22;
-  let message = "Seni seviyorum Murat!";
-  return alert(user), alert(age), alert(message);
-};
+function greet() {
+  const name = prompt(`What is your name?`);
+  alert(`Naber ${name}! Iyi ki bastin bana! :)`);
+}
 
-love();
+button.addEventListener("click", greet);
