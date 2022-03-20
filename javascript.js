@@ -1,11 +1,24 @@
 "use strict";
 
-let aFunc = function () {
-  let x = '2';
-  let y = 1;
-  let comparison = x > y;
-  return comparison;
-};
 
-console.log(aFunc());
-console.log(typeof.x);
+
+
+let whoSThere = prompt(`Who's there??`);
+
+function passWordCheck(passWord) {
+  if (passWord != 'TheMaster') {
+    alert('Wrong password!');
+  } else {
+    alert('Welcome!');
+  }
+}
+
+
+if (whoSThere === 'Admin') {
+  const passWord = prompt(`What's the password?`);
+  passWordCheck(passWord);
+} else if (whoSThere === '') {
+  alert('Cancelled')
+} else {
+  alert(`I don't know you.`)
+};
