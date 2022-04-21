@@ -4,20 +4,41 @@
 
 
 
+const blondManitas = ['ayse', 'fatma', 'aylin', 'figen', 'hatice'];
 
-//FizzBuzz
+const brownManitas = ['selen', 'arzu', 'buket', 'ceren'];
 
-let answer = parseInt(prompt(`Enter the number goddammit!?`));
+const redManitas = ['cemre', 'marry', 'hazal', 'bar', 'Asli'];
 
-for (let i = 1; i <= answer; i++) {
+const allManitas = blondManitas.concat(brownManitas, redManitas);
 
-  if( i % 3 === 0 && i % 5 === 0) {
-    console.log(`FizzBuzz`);
-  } else if (i % 3 === 0) {
-    console.log(`Fizz`);
-  } else if (i % 5 === 0) {
-    console.log(`Buzz`);
-  } else {
-    console.log(i);
-}
-};
+
+// contacts 
+
+const contacts = ['Leyla:223322', 'Buse:333435', 'Banu:9090909', 'Defne:0303030', 'Dilek:3838843', 'Nalan:334300939'];
+
+const para = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+   const searchName = input.value.toLowerCase();
+   input.value = '';
+   input.focus();
+   para.textContent = '';
+
+   for (const contact of contacts) {
+      const splitContact = contact.split(':');
+      if (splitContact[0].toLowerCase() === searchName) {
+         para.textContent = splitContact[0] + `'nin numarasi: ` + splitContact[1] + `.`;
+         break;
+      }
+
+      if (para.textContent ==='') {
+         para.textContent = `Sana kontak montak yok.`;
+      }
+   }
+
+});
+
+
