@@ -11,13 +11,16 @@
    text-align: center;
    scroll-behavior: smooth;
 
+   width: 100%;
+
 }
 
 body {
    display: grid;
-   place-content: center;
-   place-items: center;
+
    background: rgb(51, 63, 90);
+   margin: 0 1rem 0 1rem;
+   width: 100%;
 
 
 }
@@ -27,7 +30,9 @@ a {
 }
 
 section {
-   width: 100%;
+   width: auto;
+   display: grid;
+   margin: .62rem auto;
 }
 
 main {
@@ -48,12 +53,13 @@ p {
    max-width: 90%;
    text-align: left;
    hyphens: none;
+   margin: auto auto 1rem 0;
 }
 
 button,
 select {
 
-   margin: 1rem;
+   margin: 1rem 0;
    border-radius: 0.5rem 0.5rem 0 0.5rem;
    padding: 0.7rem;
    cursor: pointer;
@@ -77,23 +83,34 @@ button:hover {
 
 .menu ul {
    display: flex;
-   place-items: center;
    place-content: center;
-   padding:
-      border: 1px solid rgba(255, 255, 255, 0.19);
+   place-items: center;
+   margin: 0 0 1.62rem 0;
+   padding: 0;
+
+
+}
+
+.menu li {
+   display: flex;
+   place-content: center;
+   place-items: center;
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   width: auto;
+}
+
+.menu ul li a {
+   padding: 0.4rem 0.8rem;
+   border: 1px solid rgba(255, 255, 255, 0);
+   cursor: pointer;
+   border: 1px solid rgba(255, 255, 255, 0.19);
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.09);
 
 }
 
-.menu ul li {
-   padding: 0.4rem 0.8rem;
-   border: 1px solid rgba(255, 255, 255, 0);
-   cursor: pointer;
-
-
-}
-
-.menu ul li:hover {
+.menu ul li a:hover {
    background-color: rgba(255, 255, 255, 0.09);
    border: 1px solid rgba(255, 255, 255, 0.19);
    padding: 0.4rem 3.2rem;
@@ -113,12 +130,10 @@ option {
 
 /* Contacts page */
 
-.searchContact {
-   display: grid;
-   margin: 2rem auto;
-}
+
 
 input {
+   width: auto;
    border-radius: 1rem;
    padding: 0.6rem 0.6rem 0.4rem 0.6rem;
    background: rgba(255, 255, 255, 0.19);
